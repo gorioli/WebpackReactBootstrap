@@ -36,9 +36,6 @@ Note: if chrome cant browse http://localhost:8080/webpack-dev-server/
 Then change localhost to '127.0.0.1'
  
  
-### Debugging web page:
-...test/index.html?CRXID=cgjiodgmgcbgdlhplnaolkghbfagokfo&TBPartnerid=wesd&pipPartnerName=567d&OfferID=567567
-
 if npm gives errors, this might help on mac:
 sudo chown -R $USER /usr/local
 
