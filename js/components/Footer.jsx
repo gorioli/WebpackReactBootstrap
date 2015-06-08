@@ -1,11 +1,13 @@
 var React = require('react');
+var SelfIntro = require('./SelfIntro.jsx');
 
-module.exports  = React.createClass({
+module.exports = React.createClass({
     render: function () {
         return (
             <footer>
-                <h6>I am {this.props.data.txt_footer}&nbsp;
-                    <a href="#" target="_blank">Some link</a>.
+                <h6>
+                    <SelfIntro>Footer</SelfIntro>
+                    <a href="./index.html">Refresh</a>.
                 </h6>
             </footer>
         );

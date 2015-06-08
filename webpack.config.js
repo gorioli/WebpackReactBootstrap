@@ -19,8 +19,8 @@ var config = {
     output: {
         //path: './build/',
         path: path.resolve(__dirname, 'build'),
-        filename: 'app.js',
-        sourceMapFilename: 'maps/landingPage_source.map'
+        filename: 'bundle.js',
+        sourceMapFilename: 'maps/hello_source.map'
     },
 
     devServer: {
@@ -40,11 +40,17 @@ var config = {
     module: {
         noParse: [pathToReact],
 
-        loaders: [{
-            test: /\.jsx?$/, // A regexp to test the require path. accepts either js or jsx
-            exclude: [node_modules],
-            loader: 'babel' // The module to load. "babel" is short for "babel-loader"
-        }]
+        loaders: [
+            {
+                test: /\.jsx?$/, // A regexp to test the require path. accepts either js or jsx
+                exclude: [node_modules],
+                loader: 'babel' // The module to load. "babel" is short for "babel-loader"
+            },
+            //{
+            //    test: /\.png$/,
+            //    loader: "file?name=[name].[ext]"
+            //},
+        ]
     },
 
     plugins: [

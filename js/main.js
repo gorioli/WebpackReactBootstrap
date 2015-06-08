@@ -9,6 +9,7 @@ function main() {
     var data = {
         //img_offer: "img/chrome_ask_toolbar.png",
         //img_header: "http://localhost:9080/img/icon_formatfactory.png",
+        img_header: "./img/lemon.png",
         txt_header: "Header",
         txt_footer: "Footer",
         txt_mainConent: "Main Content"

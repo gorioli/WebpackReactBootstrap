@@ -1,4 +1,4 @@
-@mixin background_image($from, $to){
+@mixin background_image($from, $to) {
   background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
   background-image: -webkit-linear-gradient(top, $from, $to);
   background-image: -moz-linear-gradient(top, $from, $to);
@@ -10,7 +10,7 @@
 
 input[type="button"] {
 
-  @mixin border_radius($value){
+  @mixin border_radius($value) {
     -webkit-border-radius: $value;
     -moz-border-radius: $value;
     border-radius: $value;
@@ -29,7 +29,6 @@ input[type="button"] {
   width: 248px;
   height: 60px;
 
-
   @include background_image(#3077C7, #284F96);
   @include border_radius(3px);
 
@@ -40,18 +39,13 @@ input[type="button"] {
   }
 }
 
-input[data-class*="disabled"]{
-  border-color: #C0C4C5;
-  @include background_image(#E1E8EF, #AFB1B6);
+input[data-class*="disabled"] {
+  &, &:hover {
+    border-color: #C0C4C5;
+    @include background_image(#E1E8EF, #AFB1B6);
+  }
 }
 
-input[data-class*="disabled"]:hover
-{
-  border-color: #C0C4C5;
-  @include background_image(#E1E8EF, #AFB1B6);
-}
-
-input[data-class*="disabled--font-color"]
-{
+input[data-class*="disabled--font-color"] {
   color: #F7F7F7;
 }
