@@ -1,7 +1,14 @@
 # Steps:
         npm install
         /usr/bin/scss --no-cache --update sass/:build/css/
+        
+        
+Then:
+
         npm run build
+or 
+
+        npm run dev
         
 you are ready to browse build/index.html 
 

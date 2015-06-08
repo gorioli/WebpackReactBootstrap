@@ -4,7 +4,7 @@ module.exports = React.createClass({
     render: function () {
         return (
             <span>
-                I am a <b data-class="special">{this.props.children}</b>&nbsp;
+                I am a <b data-class="special">{this.props.children}!</b>&nbsp;
             </span>
         )
     }
