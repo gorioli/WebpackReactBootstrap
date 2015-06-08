@@ -17,8 +17,8 @@ module.exports = React.createClass({
             btnClickMe.disabled = true;
         };
 
-        if (this.countFailure == 1) {
-            disableAddNowBtn().bind(this);
+        if (this.countFailure >= 1) {
+            disableAddNowBtn.bind(this)();
         }
         this.countFailure++;
         React.findDOMNode(this.refs.btnClickMe).value = 'One more time'

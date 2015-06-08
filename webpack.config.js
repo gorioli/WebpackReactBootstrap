@@ -26,7 +26,7 @@ var config = {
     devServer: {
         contentBase: "./build",
         //noInfo: true, //  --no-info option
-        hot: false,
+        hot: true,
         //inline: true,
         //lazy: true,
     },
@@ -49,7 +49,7 @@ var config = {
 
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
+        //new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
     ]
 };
 
