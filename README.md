@@ -6,11 +6,12 @@
 Then:
 
         npm run build
+you are ready to browse index.html 
 or 
 
         npm run dev
         
-you are ready to browse build/index.html 
+you are ready to browse http://127.0.0.1:8080/webpack-dev-server/ 
 
 # Explanations:
 ### Dependencies installation 
