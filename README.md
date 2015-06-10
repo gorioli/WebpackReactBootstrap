@@ -83,7 +83,7 @@ generates files into `build` where we don't want to keep source maps. Don't forg
 Instead of `build/main.css` and `build/bundle.js` it should be `dist/main.css` and `dist/bundle.js`.
         
 
-## Old instructions that might be irrelevant is here just for history:
+## Old instructions for history:
 
 ### Source maps removal 
 If source-maps are not needed on production then remove a reference to them from the end of each file (last commented line):
