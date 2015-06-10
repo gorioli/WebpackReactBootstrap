@@ -1,36 +1,38 @@
 # Steps:
         npm install
         /usr/bin/scss --no-cache --update sass/:build/css/
-        
-        
 Then:
 
         npm run build
 you are ready to browse index.html 
-or 
+
+__or__ 
 
         npm run dev
-        
 you are ready to browse http://127.0.0.1:8080/webpack-dev-server/ 
 
 # Explanations:
 ### Dependencies installation 
         npm install
-** This will install libraries defined in package.json under node_modules folder **
+This will install libraries defined in package.json under node_modules folder
         
 ### Webpack
-WebPack combines multiple js files into one - bundle.js. Also, it minifies images more than x10 times. It can also uglify js files. 
+WebPack combines multiple js files into one - bundle.js. It can minify images more than x10 times. 
+It can create source maps to a bundled code which is very useful for debugging. 
+It can also uglify js files. 
 
 Provided configuration files are:
 * package.json: installs all dependencies by running "npm install" via command line.  
-* webpack.config.js: configures webpack.
+* webpack.config.js: configures webpack to generate files into `build` dir for development. It generates js source map as well.
+* webpack.production.config.js: configures webpack to generate files into `dist` dir for production. No source maps are here.
 
 Running webpack:
 ----------------
         node_modules/.bin/webpack
-or 
+or easier way:
         
         npm run build
+generates files into `build` where we have source maps for js and css. 
 
 Running dev server:
 ------------------
@@ -46,6 +48,7 @@ Then change localhost to '127.0.0.1'
  
 if npm gives errors, this might help on mac:
 sudo chown -R $USER /usr/local
+
 
 ### Installing the Sass/SCSS transpiler
 
@@ -69,15 +72,18 @@ The tool is installed to the folder where Ruby executable file and the gem.bat f
 Running SCSS preprocessor in the project command line:
 -----------------------------------------------------
         /usr/bin/scss --no-cache --update sass/:build/css/
-**this command takes files from 'sass/' folder and compiles them into 'build/css/' folder**
+This command takes files from 'sass/' folder and compiles them into 'build/css/' folder. 
+It also creates maps for being able to see original .scss files instead of one main.css while debugging. 
 
 
-Doing the deploy
-----------------
+Running for deployment:
+----------------------
         npm run deploy
+generates files into `build` where we don't want to keep source maps. Don't forget to change index.html in the project folder to reference the right files.
+Instead of `build/main.css` and `build/bundle.js` it should be `dist/main.css` and `dist/bundle.js`.
         
 
-# Not very important
+## Old instructions that might be irrelevant is here just for history:
 
 ### Source maps removal 
 If source-maps are not needed on production then remove a reference to them from the end of each file (last commented line):
@@ -97,11 +103,9 @@ If source-maps are not needed on production then remove a reference to them from
         $ static-server
 
 4. Access the image via:
-** http://localhost:9080/img/icon_atube.png **
+`http://localhost:9080/img/icon_atube.png`
 
 
-
-Old instructions, not for the project, just for history:
 ##### Install react tools:
 
         sudo npm install -g react-tools
