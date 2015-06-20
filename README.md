@@ -80,7 +80,8 @@ Running for deployment:
 ----------------------
         npm run deploy
 generates files into `build` where we don't want to keep source maps. Don't forget to change index.html in the project folder to reference the right files.
-Instead of `build/main.css` and `build/bundle.js` it should be `dist/main.css` and `dist/bundle.js`.
+Instead of `build/css/main.css` and `build/bundle.js` it should be `dist/css/main.css` and `dist/bundle.js`. 
+Also copy a file `build/css/main.css` into `dist/css/main.css`.
         
 
 ## Old instructions for history:
