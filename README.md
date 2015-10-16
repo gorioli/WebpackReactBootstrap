@@ -1,23 +1,35 @@
-# Steps:
-        npm install
-        /usr/bin/scss --no-cache --update sass/:build/css/
-Then:
+# Commands for project setting:
+Installing all dependencies:
+
+        npm install 
+               
+Compiling .scss files into .css:
+
+        npm run sass
+        
+Compiling .jsx files into one bundle.js file:
 
         npm run build
-you are ready to browse index.html 
+The project is ready for browsing index.html with js debugging under 'webpack://' folder in chrome dev tools 
 
 __or__ 
 
         npm run dev
-you are ready to browse http://127.0.0.1:8080/webpack-dev-server/ 
+you are ready to browse http://127.0.0.1:8080/webpack-dev-server/ with live update
 
-# Explanations:
+__or__  
+
+        npm run deploy
+The project is ready for releasing to production with minified version of bundle.js.
+
+
+## Detailed Commands Explanation:
 ### Dependencies installation 
         npm install
-This will install libraries defined in package.json under node_modules folder
+This will install libraries defined in package.json into the node_modules folder
         
 ### Webpack
-WebPack combines multiple js files into one - bundle.js. It can minify images more than x10 times. 
+WebPack combines multiple js files into one - bundle.js. 
 It can create source maps to a bundled code which is very useful for debugging. 
 It can also uglify js files. 
 
@@ -72,8 +84,11 @@ The tool is installed to the folder where Ruby executable file and the gem.bat f
 Running SCSS preprocessor in the project command line:
 -----------------------------------------------------
         /usr/bin/scss --no-cache --update sass/:build/css/
-This command takes files from 'sass/' folder and compiles them into 'build/css/' folder. 
-It also creates maps for being able to see original .scss files instead of one main.css while debugging. 
+or easier way
+        
+        npm run sass        
+This command (defined in package.json as well) takes files from 'sass/' folder and compiles them into 'build/css/' folder. 
+It also creates source maps debugging css styles.
 
 
 Running for deployment:
