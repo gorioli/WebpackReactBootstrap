@@ -2,6 +2,9 @@
 Installing all dependencies:
 
         npm install 
+or simply
+    
+        npm i
                
 Compiling .scss files into .css:
 

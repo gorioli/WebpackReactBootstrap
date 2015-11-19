@@ -45,8 +45,14 @@ var config = {
             {
                 test: /\.jsx?$/, // A regexp to test the require path. accepts either js or jsx
                 exclude: [node_modules],
-                loader: 'babel' // The module to load. "babel" is short for "babel-loader"
-            }
+                loaders: ['babel']
+                //loader: 'babel' // The module to load. "babel" is short for "babel-loader"
+            },
+            //{
+            //    test: /\.js$/,
+            //    exclude: /node_modules/,
+            //    loader: "babel-loader"
+            //}
             //{
             //    test: /\.png$/,
             //    loader: "file?name=[name].[ext]"
