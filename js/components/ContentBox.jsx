@@ -1,6 +1,6 @@
 var React = require('react');
-var Header = require('./Header.jsx');
 var SomeContent = require('./SomeContent.jsx');
+var Header = require('./Header.jsx');
 var Footer = require('./Footer.jsx');
 var externalModule = require('./../externalModule.js');
 
@@ -13,10 +13,10 @@ module.exports = React.createClass({
     render () {
         return (
             <div>
-                <Header data={this.props.data}/>
+                <Header {...this.props}/>
                 <section>
-                    <SomeContent data={this.props.data}/>
-                    <Footer data={this.props.data}/>
+                    <SomeContent {...this.props}/>
+                    <Footer {...this.props}/>
                 </section>
             </div>
         );

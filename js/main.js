@@ -1,22 +1,16 @@
 'use strict';
 
-var ContentBox = require('./components/ContentBox.jsx');
 var React = require('react');
+var ReactDOM = require('react-dom');
+var data = require('./data.js');
+var ContentBox = require('./components/ContentBox.jsx');
 
-main();
 
-function main() {
-    var data = {
-        //img_offer: "img/chrome_ask_toolbar.png",
-        //img_header: "http://localhost:9080/img/icon_formatfactory.png",
-        img_header: "./img/lemon.png",
-        txt_header: "Header",
-        txt_footer: "Footer",
-        txt_mainConent: "Main Content"
-    };
+(function main() {
 
-    React.render(
+    ReactDOM.render(
+
         <ContentBox data={data}/>,
         document.getElementById('content')
     );
-};
+})();

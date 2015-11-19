@@ -1,4 +1,5 @@
 var React = require('react');
+var ReactDOM = require('react-dom');
 var externalModule = require('./../externalModule.js');
 var SelfIntro = require('./SelfIntro.jsx');
 
@@ -12,7 +13,7 @@ module.exports = React.createClass({
         externalModule.Global.printStatus();
 
         var disableAddNowBtn = function () {
-            var btnClickMe = React.findDOMNode(this.refs.btnClickMe);
+            var btnClickMe = ReactDOM.findDOMNode(this.refs.btnClickMe);
 
             btnClickMe.setAttribute("data-class", "disabled, disabled--font-color");
             btnClickMe.disabled = true;
@@ -23,7 +24,7 @@ module.exports = React.createClass({
             disableAddNowBtn.bind(this)();
         }
         else{
-            React.findDOMNode(this.refs.btnClickMe).value = 'One more time'
+            ReactDOM.findDOMNode(this.refs.btnClickMe).value = 'One more time'
         }
         this.countFailure++;
 
