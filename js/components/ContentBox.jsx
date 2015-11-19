@@ -1,7 +1,5 @@
 var React = require('react');
 var SomeContent = require('./SomeContent.jsx');
-var Header = require('./Header.jsx');
-var Footer = require('./Footer.jsx');
 var externalModule = require('./../externalModule.js');
 
 module.exports = React.createClass({
@@ -11,12 +9,12 @@ module.exports = React.createClass({
     },
 
     render () {
+        var { txt_mainConent, ...other } = this.props.data;
         return (
             <div>
-                <Header {...this.props}/>
                 <section>
-                    <SomeContent {...this.props}/>
-                    <Footer {...this.props}/>
+                    {txt_mainConent}
+                    <SomeContent {...other}/>
                 </section>
             </div>
         );
