@@ -35,7 +35,7 @@ module.exports = React.createClass({
         return (
             <article>
                 <br/>
-                <h1>{this.props.hello}</h1>
+                <h1>{this.props.hello}</h1> <br/>
                 <SelfIntro>Some Content</SelfIntro>
                 <br/><br/>
                 <input ref="btnClickMe" type="button" value="Click me" onClick={this.addNow} />
